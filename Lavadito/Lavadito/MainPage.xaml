@@ -6,11 +6,10 @@
              mc:Ignorable="d"
              x:Class="Lavadito.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Button x:Name="buttonOn" Text="ON" BackgroundColor="Green" TextColor="White" Clicked="ButtonON_Clicked" IsEnabled="True" WidthRequest="180" HeightRequest="180" BorderRadius="90"></Button>
+        <Button x:Name="buttonOff" Text="OFF" BackgroundColor="Red" TextColor="White" Clicked="ButtonOFF_Clicked" IsEnabled="True" WidthRequest="180" HeightRequest="180" BorderRadius="90"></Button>
+        <Entry x:Name="tokenEntry"></Entry>
     </StackLayout>
 
 </ContentPage>

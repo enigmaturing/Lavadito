@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using System.Net.Http;
 
 namespace Lavadito
 {
@@ -16,6 +17,26 @@ namespace Lavadito
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void ButtonON_Clicked(object sender, EventArgs e)
+        {
+            toggleMotor("on");
+        }
+
+        private void ButtonOFF_Clicked(object sender, EventArgs e)
+        {
+            toggleMotor("off");
+        }
+
+        private async void toggleMotor(string s)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var formcontent = new FormUrlEncodedContent(new[] { new KeyValuePair<string, string>("arg", s) });
+
+                var request = await httpClient.PostAsync("https://api.particle.io/v1/devices/e00fce68ba9a1f5ea4870186/motorToggle?access_token=" + tokenEntry.Text.ToString(), formcontent);
+            }
         }
     }
 }
