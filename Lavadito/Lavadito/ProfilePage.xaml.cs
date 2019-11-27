@@ -15,6 +15,10 @@ namespace Lavadito
         public ProfilePage()
         {
             InitializeComponent();
+
+            var url = "http://javiergonzalez.de/lavadero/profile.png";
+            var byteArray = new System.Net.WebClient().DownloadData(url);
+            profileImage.Source = ImageSource.FromStream(() => new System.IO.MemoryStream(byteArray));
         }
     }
 }

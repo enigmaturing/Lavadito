@@ -5,12 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Mein Profile"
-             x:Class="Lavadito.ProfilePage">
+             x:Class="Lavadito.ProfilePage"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hier dein Profile"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20,20,0,0">
+            <StackLayout Orientation="Horizontal">
+                <ic:CircleImage x:Name="profileImage" VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="150" WidthRequest="150"></ic:CircleImage>
+                <StackLayout Margin="40,0,0,0">
+                    <Label x:Name="Name" Text="Max" FontSize="35"></Label>
+                    <Label x:Name="Surname" Text="Müller" FontSize="35"></Label>
+                    <Label x:Name="Age" Text="(36)" FontSize="35"></Label>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
