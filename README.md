@@ -1,5 +1,5 @@
 # Lavadito
-Controlar prototipo de lavadora remotamente
+Este es el repositorio de una app que controla el prototipo de una lavadora remotamente
 
 |Android|iOS|
 |---|---|
