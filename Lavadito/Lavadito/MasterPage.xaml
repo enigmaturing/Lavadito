@@ -10,6 +10,7 @@
             <StackLayout Margin="10,10,10,10">
                 <Button Text="Mein Profil" Clicked="Button_Clicked_Profile" BackgroundColor="White" TextColor="#2196F3"></Button>
                 <Button Text="Meine Gutscheine" Clicked="Button_Clicked_Vouchers" BackgroundColor="White" TextColor="#2196F3"></Button>
+                <Button Text="Fernsteuerung" Clicked="Button_Clicked_RemoteControl" BackgroundColor="White" TextColor="#2196F3"></Button>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
