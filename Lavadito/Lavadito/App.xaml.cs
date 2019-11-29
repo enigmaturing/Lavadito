@@ -10,7 +10,6 @@ namespace Lavadito
         {
             InitializeComponent();
 
-            //MainPage = new MainPage();
             MainPage = new MasterPage();
         }
 
