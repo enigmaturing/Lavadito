@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AppCenter.Crashes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,6 +35,16 @@ namespace Lavadito
         {
             Detail = new NavigationPage(new RemoteControlPage());
             IsPresented = false;
+        }
+
+        private void Button_Clicked_CarshSimulationWithAppCenterFunction(object sender, EventArgs e)
+        {
+            Crashes.GenerateTestCrash();
+        }
+
+        private void Button_Clicked_CarshSimulationWithException(object sender, EventArgs e)
+        {
+            throw new Exception("Simulating a crash using an exception");
         }
     }
 }
