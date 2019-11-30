@@ -4,12 +4,13 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Lavadito.MainPage">
-
+             Title="Fernsteuerung"
+             x:Class="Lavadito.RemoteControlPage">
+    
     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Button x:Name="buttonOn" Text="ON" BackgroundColor="Green" TextColor="White" Clicked="ButtonON_Clicked" IsEnabled="True" WidthRequest="180" HeightRequest="180" BorderRadius="90"></Button>
         <Button x:Name="buttonOff" Text="OFF" BackgroundColor="Red" TextColor="White" Clicked="ButtonOFF_Clicked" IsEnabled="True" WidthRequest="180" HeightRequest="180" BorderRadius="90"></Button>
         <Entry x:Name="tokenEntry"></Entry>
     </StackLayout>
-
+    
 </ContentPage>

@@ -29,5 +29,11 @@ namespace Lavadito
             Detail = new NavigationPage(new VouchersPage());
             IsPresented = false;
         }
+
+        private void Button_Clicked_RemoteControl(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new RemoteControlPage());
+            IsPresented = false;
+        }
     }
 }
