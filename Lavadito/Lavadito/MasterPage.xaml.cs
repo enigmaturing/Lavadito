@@ -13,6 +13,14 @@ namespace Lavadito
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterPage : MasterDetailPage
     {
+
+        // Dummy-dictionary that holds the info about the actual user
+        Dictionary<string, string> userInfo = new Dictionary<string, string>
+         {
+             {"user", "javier@javier.es" },
+             {"network", "WiFi" }
+         };
+
         public MasterPage()
         {
             InitializeComponent();
@@ -45,6 +53,19 @@ namespace Lavadito
         private void Button_Clicked_CarshSimulationWithException(object sender, EventArgs e)
         {
             throw new Exception("Simulating a crash using an exception");
+        }
+
+        // Solves issue #19: Catch carshes and report them as errors
+        private void Button_Clicked_ReportCrashAsAnError(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new Exception(); // We simulate an app crash by thrwoing an exception
+            }
+            catch (Exception ex)
+            {
+                AppCenterHelper.TrackError(ex, userInfo);
+            }
         }
     }
 }
