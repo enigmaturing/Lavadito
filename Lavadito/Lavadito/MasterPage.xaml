@@ -13,6 +13,7 @@
                 <Button Text="Fernsteuerung" Clicked="Button_Clicked_RemoteControl" BackgroundColor="White" TextColor="#2196F3"></Button>
                 <Button Text="'Crash' simulieren (mit AppCenter Function)" Clicked="Button_Clicked_CarshSimulationWithAppCenterFunction" BackgroundColor="White" TextColor="#2196F3"></Button>
                 <Button Text="'Crash' simulieren (mit einer Exception)" Clicked="Button_Clicked_CarshSimulationWithException" BackgroundColor="White" TextColor="#2196F3"></Button>
+                <Button Text="Report a 'Crash' as an Error" Clicked="Button_Clicked_ReportCrashAsAnError" BackgroundColor="White" TextColor="#2196F3"></Button>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
