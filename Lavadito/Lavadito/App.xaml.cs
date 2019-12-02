@@ -25,10 +25,16 @@ namespace Lavadito
             MainPage = new MasterPage();
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
             // Handle when your app starts
             AppCenter.Start("android=f93b9933-3135-4a2c-bc1d-7b2c4bb2439c;ios=aeaed092-f87c-465f-8916-c23f13c7fa81", typeof(Analytics), typeof(Crashes));
+
+            // ISSUE #12
+            // Check if the app crashed on last session
+            bool didAppCrash = await Crashes.HasCrashedInLastSessionAsync();
+            if (didAppCrash)
+                await MainPage.DisplayAlert("Sorry for that!", "It seems like the app crashed before."+ Environment.NewLine +"We are working on that issue to fix it.", "It's ok!");
 
             // ISSUE #11
             // Call the Method TrackEvent() of the package Microsoft.AppCenter.Analytics, through the helper class AppCenterHelper
