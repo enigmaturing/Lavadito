@@ -40,6 +40,10 @@ namespace Lavadito
             // Call the Method TrackEvent() of the package Microsoft.AppCenter.Analytics, through the helper class AppCenterHelper
             // This helper class helps us to group all methods related to AppCenter, modifing its behaviour when necessary
             AppCenterHelper.TrackEvent("user started the app", userInfo);
+
+            // ISSUE #28
+            // This is a dummy function to test Continous Delivery
+            await MainPage.DisplayAlert("CD", "Hey, this is to test the Continuous Delivery!", "NEAT!");
         }
 
         protected override void OnSleep()
