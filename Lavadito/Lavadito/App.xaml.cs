@@ -22,7 +22,7 @@ namespace Lavadito
         {
             InitializeComponent();
 
-            MainPage = new MasterPage();
+            MainPage = new LoginPage();
         }
 
         protected override async void OnStart()
